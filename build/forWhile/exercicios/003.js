@@ -1,8 +1,8 @@
 "use strict";
-function numeros(numeroN, numeroM) {
+function entreNumeros(numeroN, numeroM) {
     while (numeroM < numeroN) {
         console.log(numeroM);
         numeroM++;
     }
 }
-numeros(10, 8);
+entreNumeros(10, 8);
