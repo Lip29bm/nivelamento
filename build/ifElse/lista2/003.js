@@ -1,0 +1,6 @@
+"use strict";
+function numeros(numero1, numero2, numero3, numero4) {
+    let soma = numero1 + numero2 + numero3 + numero4;
+    console.log(soma);
+}
+numeros(2, 8, 12, 16);
