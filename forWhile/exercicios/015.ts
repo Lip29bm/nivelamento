@@ -1,24 +1,32 @@
-let variosNumeros: number[] =[32,78,34,65,2,7,9,23,90]
-let pares:number=0
-let somaPares:number=0
-let impares:number=0
-let quantiaNum:number=0
-let somaTotal:number=0
-
-for(let i :number= 0;i<variosNumeros.length;i++){
-    quantiaNum++    
-    somaTotal+=variosNumeros[i]
-    if(variosNumeros[i]%2===0){
-        pares++
-        somaPares+=variosNumeros[i]
-    }else{
-        impares++
+import readline from "readline-sync";
+function variasOperacoes(
+  quantiaPar: number,
+  quantiaImpar: number,
+  mediaPar: number,
+  somaPar:number,
+  quantiaTotal: number,
+  somaTotal: number,
+  mediaGeral: number
+) {
+  let i: number = 0;
+  while (i < 20) {
+    let numeros: number = Number(readline.question("digite um numero: "));
+    if (numeros <= 0) {
+      break;
     }
-   
+    quantiaTotal++;
+    somaTotal += numeros;
+    mediaGeral = somaTotal / quantiaTotal;
+    if (numeros % 2 === 0) {
+      somaPar += numeros;
+      quantiaPar++;
+    } else if (numeros % 2 !== 0) {
+      quantiaImpar++;
+    }
+    mediaPar = somaPar / quantiaPar;
+  }
+  console.log(
+    `foram digitados ${quantiaPar} pares e ${quantiaImpar} impares, a media dos numeros pares foi ${mediaPar} e a media geral foi ${mediaGeral}`
+  );
 }
-let parMedia:number= somaPares/pares
-let mediaGeral:number= somaTotal/quantiaNum
-console.log(pares)
-console.log(impares)
-console.log(parMedia)
-console.log(mediaGeral)
+variasOperacoes(0, 0, 0, 0, 0, 0, 0);

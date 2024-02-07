@@ -1,14 +1,22 @@
 "use strict";
-let numerosInseridos = [132, 54, 2, 54, 2, 53, 645, 80, 13];
-let divisiveisPor2e5 = 0;
-let divisiveisPor2e3 = 0;
-for (let i = 0; i <= numerosInseridos.length; i++) {
-    if (numerosInseridos[i] % 2 === 0 && numerosInseridos[i] % 5 === 0) {
-        divisiveisPor2e5++;
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const readline_sync_1 = __importDefault(require("readline-sync"));
+function indentificandoDivisores(divisiveisPor2e3, divisiveisPor2e5) {
+    for (let i = 0; i <= 10; i++) {
+        let numeros = Number(readline_sync_1.default.question("digite um numero"));
+        if (numeros < 0) {
+            break;
+        }
+        if (numeros % 2 === 0 && numeros % 5 === 0) {
+            divisiveisPor2e5 = divisiveisPor2e5 + String(numeros) + "";
+        }
+        if (numeros % 2 === 0 && numeros % 3 === 0) {
+            divisiveisPor2e3 = divisiveisPor2e3 + String(numeros) + "";
+        }
     }
-    else if (numerosInseridos[i] % 2 === 0 && numerosInseridos[i] % 3 === 0) {
-        divisiveisPor2e3++;
-    }
+    console.log(`${divisiveisPor2e3} sao divisiveis por 2 e 3, e ${divisiveisPor2e5} sao divisiveis por 2 e 5`);
 }
-console.log(divisiveisPor2e5);
-console.log(divisiveisPor2e3);
+indentificandoDivisores("", "");

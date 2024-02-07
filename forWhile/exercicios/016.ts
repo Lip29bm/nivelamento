@@ -1,10 +1,13 @@
-let medias:any[]=[6,"andre",5.5, "julia",8,"carol"]
-let mediaPessoal:number=0
-let aluno:any
-for(let i:any=0;i<=medias.length;i++){
-if(medias[i]>mediaPessoal){
-    mediaPessoal=medias[i]
-    aluno=medias[i+1]
+import readline from "readline-sync"
+function maiorMedia(maiorMedia:number, alunoCampeao:string){
+   for(let i :number=0; i<5;i++){
+    let media:number=Number(readline.question("insira a media"))
+    let aluno:string=String(readline.question("insira o nome"))
+    if(media>maiorMedia){
+        maiorMedia= media
+        alunoCampeao=aluno
+    }
+   } 
+   console.log(`a maior media da escola foi ${maiorMedia} tirada pelo aluno ${alunoCampeao}`)
 }
-}
-console.log(mediaPessoal + aluno)
+maiorMedia(0, "")
