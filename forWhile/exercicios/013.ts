@@ -1,12 +1,27 @@
-let arraySeteNumeros: number[] = [32, 42, 1, 17, 39, 27, 8, 25]
-let totalImpar:number = 0        
-let totalPar:number = 0
-for(let i:number=0; i<=arraySeteNumeros.length; i++ ){
-    if(arraySeteNumeros[i]%2 ==0){
-       totalPar ++
-    } else if(arraySeteNumeros[i]%2 !=0){
-        totalImpar ++ 
-    }
-}   
-console.log(totalImpar)
-console.log(totalPar)
+import readline from "readline-sync";
+function identificarParOuImpar(totalPar:number, totalImpar:number):void{
+    let i:number = 0
+    while(i <10){
+        let numeros:number = Number(readline.question(("digite um número:")))
+        if(numeros < 0){
+            break
+        }else if(numeros %2 ===0){
+            totalPar ++
+        }else{
+            totalImpar ++
+        }
+        i++
+    } 
+    console.log('foram digitados ' + totalPar + ' numeros pares e ' + totalImpar + ' numeros impares')
+    
+}
+identificarParOuImpar(0, 0)
+
+
+
+
+
+
+
+
+
