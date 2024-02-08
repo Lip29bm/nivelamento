@@ -1,9 +1,16 @@
 "use strict";
-let arrayA = [-10, -2, 3, 6, 8];
-let negativo = 0;
-for (let j = arrayA[0]; j <= arrayA.length; j++) {
-    if (arrayA[j] < 0) {
-        negativo++;
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const readline_sync_1 = __importDefault(require("readline-sync"));
+function numero(valorNegativo) {
+    for (let i = 1; i <= 5; i++) {
+        let valorA = Number(readline_sync_1.default.question("Digite um numero"));
+        if (valorA < 0) {
+            valorNegativo++;
+        }
     }
+    console.log(valorNegativo + " Numeros sao negativos");
 }
-console.log(negativo);
+numero(0);

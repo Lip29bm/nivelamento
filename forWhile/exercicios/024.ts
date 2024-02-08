@@ -1,12 +1,11 @@
-let arrayA:number[] = [-10, -2, 3, 6, 8]
-let negativo:number = 0
-
-
-for(let j:number =arrayA[0]; j <= arrayA.length; j++){
-    if(arrayA[j] < 0 ){
-        negativo ++
+import readline from "readline-sync"
+function numero(valorNegativo:number){ 
+  for(let i:number = 1; i<=5; i++){ 
+  let valorA:number = Number(readline.question("Digite um numero"))
+    if(valorA < 0){ 
+    valorNegativo ++
     }
-      
+  }
+  console.log(valorNegativo + " Numeros sao negativos")
 }
-
-console.log(negativo)
+numero(0)

@@ -1,4 +1,6 @@
-let valor:number= 91
+import readline from "readline-sync"
+function raizQuadrada ():void{ 
+let valor:number= Number(readline.question(("Digite um numero:")))
 let j:number=1
 let raiz:number=0
 while(valor>=j){
@@ -8,3 +10,5 @@ while(valor>=j){
     
 }
 console.log(raiz)
+}
+raizQuadrada()
