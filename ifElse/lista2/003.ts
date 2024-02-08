@@ -1,4 +1,4 @@
-function numeros(
+function somaDeNumeros(
     numero1: number,
     numero2: number,
     numero3: number,
@@ -7,5 +7,5 @@ function numeros(
     let soma = numero1 + numero2 + numero3 + numero4;
     console.log(soma);
   }
-  numeros(2, 8, 12, 16);
+  somaDeNumeros(2, 8, 12, 16);
   

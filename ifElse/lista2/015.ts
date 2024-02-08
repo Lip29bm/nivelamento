@@ -1,4 +1,4 @@
-function numeros(numeroPositivo:number):void{
+function operacoesNumericas(numeroPositivo:number):void{
     let numeroAoQuadrado:number = numeroPositivo**2
     console.log(numeroAoQuadrado)
 
@@ -11,4 +11,4 @@ function numeros(numeroPositivo:number):void{
     let raizCubicaDoNumero:number = numeroPositivo**0.333
     console.log(raizCubicaDoNumero)
 }
-numeros(27)
+operacoesNumericas(27)

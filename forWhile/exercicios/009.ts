@@ -1,29 +1,25 @@
-function osTresMaiores():void{let listaDeNumeros: number[] = [2, 5, 1, 7, 3];
-    let maior1: number = listaDeNumeros[0];
-    let maior2: number = listaDeNumeros[0];
-    let maior3: number = listaDeNumeros[0];
-    for (let i: number = 0; i < listaDeNumeros.length; i++) {
-      if (maior1 < listaDeNumeros[i]) {
-        maior1 = listaDeNumeros[i];
-      }
+import readline from "readline-sync";
+function tresMaiores(
+  maior: number,
+  segundoMaior: number,
+  terceiroMaior: number
+): void {
+  for (let i: number = 0; i <= 10; i++) {
+    let numeroInserido: number = Number(readline.question(`digite um numero:`));
+    if (numeroInserido > maior) {
+      terceiroMaior = segundoMaior;
+      segundoMaior = maior;
+      maior = numeroInserido;
+    } else if (numeroInserido > segundoMaior) {
+      terceiroMaior = segundoMaior;
+      segundoMaior = numeroInserido;
+    } else if (
+      numeroInserido > terceiroMaior) {
+      terceiroMaior = numeroInserido;
     }
-    for (let j: number = 0; j < listaDeNumeros.length; j++) {
-      if (maior2 < listaDeNumeros[j] && listaDeNumeros[j] !== maior1) {
-        maior2 = listaDeNumeros[j];
-      }
-    }
-    for (let k: number = 0; k < listaDeNumeros.length; k++) {
-      if (
-        maior3 < listaDeNumeros[k] &&
-        listaDeNumeros[k] !== maior1 &&
-        listaDeNumeros[k] !== maior2
-      ) {
-        maior3 = listaDeNumeros[k];
-      }
-    }
-    console.log(maior1);
-    console.log(maior2);
-    console.log("maior3);
-    }
-    osTresMaiores()
-    
+  }
+  console.log(
+    `o maior numero inserido foi ${maior}, o segundo maior foi ${segundoMaior} e o terceiro maior foi ${terceiroMaior}`
+  );
+}
+tresMaiores(0, 0, 0);

@@ -1,5 +1,5 @@
 "use strict";
-function numeros(numeroPositivo) {
+function operacoesNumericas(numeroPositivo) {
     let numeroAoQuadrado = numeroPositivo ** 2;
     console.log(numeroAoQuadrado);
     let numeroAoCubo = numeroPositivo ** 3;
@@ -9,4 +9,4 @@ function numeros(numeroPositivo) {
     let raizCubicaDoNumero = numeroPositivo ** 0.333;
     console.log(raizCubicaDoNumero);
 }
-numeros(27);
+operacoesNumericas(27);

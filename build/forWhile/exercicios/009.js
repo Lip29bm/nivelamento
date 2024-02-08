@@ -1,28 +1,25 @@
 "use strict";
-function osTresMaiores() {
-    let listaDeNumeros = [2, 5, 1, 7, 3];
-    let maior1 = listaDeNumeros[0];
-    let maior2 = listaDeNumeros[0];
-    let maior3 = listaDeNumeros[0];
-    for (let i = 0; i < listaDeNumeros.length; i++) {
-        if (maior1 < listaDeNumeros[i]) {
-            maior1 = listaDeNumeros[i];
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const readline_sync_1 = __importDefault(require("readline-sync"));
+function tresMaiores(maior, segundoMaior, terceiroMaior) {
+    for (let i = 0; i <= 10; i++) {
+        let numeroInserido = Number(readline_sync_1.default.question(`digite um numero:`));
+        if (numeroInserido > maior) {
+            terceiroMaior = segundoMaior;
+            segundoMaior = maior;
+            maior = numeroInserido;
+        }
+        else if (numeroInserido > segundoMaior) {
+            terceiroMaior = segundoMaior;
+            segundoMaior = numeroInserido;
+        }
+        else if (numeroInserido > terceiroMaior) {
+            terceiroMaior = numeroInserido;
         }
     }
-    for (let j = 0; j < listaDeNumeros.length; j++) {
-        if (maior2 < listaDeNumeros[j] && listaDeNumeros[j] !== maior1) {
-            maior2 = listaDeNumeros[j];
-        }
-    }
-    for (let k = 0; k < listaDeNumeros.length; k++) {
-        if (maior3 < listaDeNumeros[k] &&
-            listaDeNumeros[k] !== maior1 &&
-            listaDeNumeros[k] !== maior2) {
-            maior3 = listaDeNumeros[k];
-        }
-    }
-    console.log(maior1);
-    console.log(maior2);
-    console.log("maior3););
+    console.log(`o maior numero inserido foi ${maior}, o segundo maior foi ${segundoMaior} e o terceiro maior foi ${terceiroMaior}`);
 }
-osTresMaiores();
+tresMaiores(0, 0, 0);
