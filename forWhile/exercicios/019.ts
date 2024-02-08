@@ -1,6 +1,9 @@
-let numero: number = 5
-
-for(let j: number = 0; j <=10; j++){
-    let resultado:number = numero * j
-    console.log(resultado)
+import readline from "readline-sync";
+function tabuada(): void {
+  let numeroInserido: number = Number(readline.question("insira um numero:"));
+  for (let i: number = 1; i <= 10; i++) {
+    let resultado: number = numeroInserido * i;
+    console.log(`o ${numeroInserido} vezes ${i} e igual a: ${resultado}`);
+  }
 }
+tabuada();

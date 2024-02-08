@@ -7,11 +7,11 @@ const readline_sync_1 = __importDefault(require("readline-sync"));
 function medias(mediaEscolar, quantia, somaDasNotasIndividuais) {
     let i = 0;
     while (i < 20) {
-        let nome = String(readline_sync_1.default.question(("Nome do aluno:")));
+        let nome = String(readline_sync_1.default.question("Nome do aluno:"));
         if (nome == "fim") {
             break;
         }
-        let mediaDoAluno = Number(readline_sync_1.default.question(("Media do aluno:")));
+        let mediaDoAluno = Number(readline_sync_1.default.question("Media do aluno:"));
         quantia++;
         somaDasNotasIndividuais += mediaDoAluno;
     }
