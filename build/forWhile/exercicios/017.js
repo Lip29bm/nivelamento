@@ -1,16 +1,22 @@
 "use strict";
-let mediaEscolar = [];
-let nomes = ["carla", "joao", "marcos", "lucia", "eduardo"];
-let quantiaDeAlunos = 0;
-let mediaIndividual = [4.5, 8, 5.4, 9, 2.8,];
-let mediaTotal = 0;
-for (let i = 0; i <= nomes.length && i <= mediaIndividual.length; i++) {
-    if (nomes[i] === "fim") {
-        break;
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const readline_sync_1 = __importDefault(require("readline-sync"));
+function medias(mediaEscolar, quantia, somaDasNotasIndividuais) {
+    let i = 0;
+    while (i < 20) {
+        let nome = String(readline_sync_1.default.question(("Nome do aluno:")));
+        if (nome == "fim") {
+            break;
+        }
+        let mediaDoAluno = Number(readline_sync_1.default.question(("Media do aluno:")));
+        quantia++;
+        somaDasNotasIndividuais += mediaDoAluno;
     }
-    quantiaDeAlunos++;
-    mediaTotal += mediaIndividual[i];
-    mediaEscolar.push({ nome: nomes[i], media: mediaIndividual[i] });
+    mediaEscolar = somaDasNotasIndividuais / quantia;
+    console.log("A media escolar foi " + mediaEscolar);
+    console.log("A quantidades de alunos foram " + quantia);
 }
-console.log(quantiaDeAlunos);
-console.log(mediaTotal);
+medias(0, 0, 0);
