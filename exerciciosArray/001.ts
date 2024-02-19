@@ -5,5 +5,5 @@ function inverterArray(): void {
     listaInvertida.push(lista[i]);
   }
   console.log(listaInvertida);
-}
+} 
 inverterArray();

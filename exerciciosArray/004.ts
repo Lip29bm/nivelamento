@@ -9,4 +9,4 @@ function inverterVetor(): void {
   }
   console.log(vetorInvertido);
 }
-inverterVetor();
+inverterVetor(); 
