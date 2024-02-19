@@ -10,7 +10,7 @@ function listaDeProdutos(menorQueDez, entreDezETrinta, maiorQueTrinta) {
         const novoProduto = {
             nome: String(readline_sync_1.default.question("Digite o nome do produto: ")),
             custo: Number(readline_sync_1.default.question("Digite o custo do produto: ")),
-            preco: Number(readline_sync_1.default.question("Digite o preco do produto: "))
+            preco: Number(readline_sync_1.default.question("Digite o preco do produto: ")),
         };
         produtos.push(novoProduto);
     }
