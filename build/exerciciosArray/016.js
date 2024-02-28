@@ -1,0 +1,16 @@
+"use strict";
+function organizaArray() {
+    let array = [
+        3, 7, 2, 5, 12, 8, 10, 19, 20, 17, 13, 14, 11, 1, 9, 4, 6, 15, 16, 18,
+    ];
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+            if (array[i] > array[j] && j > i) {
+                array.splice(i, 0, array[j]);
+                array.splice(j + 1, 1);
+            }
+        }
+    }
+    console.log(array);
+}
+organizaArray();
